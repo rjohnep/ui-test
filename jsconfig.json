@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+      "target": "ES6",
+      "module": "commonjs",
+      "allowSyntheticDefaultImports": true,
+      "experimentalDecorators": true,
+      "baseUrl": "./",
+      "paths": {
+        "components/*": ["src/components/*"],
+        "core/*": ["src/core/*"],
+        "themes/*": ["src/themes/*"],
+        "hocs/*": ["src/hocs/*"],
+      }
+  }
+}
