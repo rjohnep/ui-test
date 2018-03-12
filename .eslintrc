@@ -18,6 +18,10 @@
         "packageDir": "./"
       }
     ],
+    "function-paren-newline": [
+      "error",
+      "consistent"
+    ],
     "consistent-return": 0,
     "jsx-a11y/href-no-hash": 0,
     "no-mixed-operators": 0,

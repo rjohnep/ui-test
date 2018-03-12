@@ -2,10 +2,9 @@ import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
 import CoreButton from 'core/Button';
 
-/** Button component description */
-export default class Button extends PureComponent {
+class Button extends PureComponent {
   static propTypes = {
-    /** Single line comment: This is label description */
+    /** Boolean indicating whether the button should render as disabled */
     label: PropTypes.string,
     /** Add an Icon by name. */
     icon: PropTypes.string,
@@ -54,3 +53,5 @@ export default class Button extends PureComponent {
     return <StyledTag {...this.componentProps}>{this.content}</StyledTag>;
   }
 }
+
+export default Button;
