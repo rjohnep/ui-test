@@ -11,6 +11,8 @@ class BaseButton extends PureComponent {
     icon: PropTypes.string,
     /** component styles */
     type: PropTypes.oneOf(['reset', 'submit', 'button']),
+    /** The color of the component. It supports those theme colors that make sense for this component. */
+    color: PropTypes.oneOf(['default', 'danger', 'brand']),
     href: PropTypes.string,
     disabled: PropTypes.bool,
     onClick: PropTypes.oneOfType([
@@ -25,6 +27,7 @@ class BaseButton extends PureComponent {
     icon: '',
     href: '',
     type: 'button',
+    color: 'default',
     disabled: false,
     onClick: false,
     theme: {},
@@ -50,9 +53,7 @@ class BaseButton extends PureComponent {
   styledTag = StyledBase;
 
   render() {
-    const StyledTag = this.styledTag;
-
-    return <StyledTag {...this.componentProps}>{this.content}</StyledTag>;
+    return <this.styledTag {...this.componentProps}>{this.content}</this.styledTag>;
   }
 }
 
