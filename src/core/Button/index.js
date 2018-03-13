@@ -1,11 +1,8 @@
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
 
-import whithTheme from 'hocs/withTheme';
-
 import StyledButton from './StyledButton';
 
-@whithTheme
 export default class Button extends PureComponent {
   static propTypes = {
     type: PropTypes.oneOf(['reset', 'submit', 'button']),
@@ -57,7 +54,7 @@ export default class Button extends PureComponent {
     const tagProps = this.componentProps;
 
     return (
-      <Tag {...tagProps}>{this.props.children}</Tag>
+        <Tag {...tagProps}>{this.props.children}</Tag>
     );
   }
 }

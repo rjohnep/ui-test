@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import getDisplayName from 'recompose/getDisplayName';
-import deepMerge from 'deepmerge';
+import deepmerge from 'deepmerge';
 
 import baseTheme from 'themes/default';
 
@@ -17,14 +17,15 @@ const withTheme = (WrappedComponent) =>
 
     static contextTypes = {
       theme: PropTypes.object,
-    }
+    };
 
     static displayName = `Themed${getDisplayName(WrappedComponent)}`;
 
     render() {
       const { theme, ...rest } = this.props;
       const { theme: contextTheme = {} } = this.context;
-      const localTheme = deepMerge(baseTheme, contextTheme, theme);
+      const localTheme = deepmerge.all([baseTheme, contextTheme, theme]);
+
       return (
         <WrappedComponent theme={localTheme} {...rest} />
       );

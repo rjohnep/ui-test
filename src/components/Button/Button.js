@@ -1,7 +1,11 @@
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
+// import withTheme from 'hocs/withTheme';
+import { withTheme } from 'styled-components';
+
 import CoreButton from 'core/Button';
 
+@withTheme
 class Button extends PureComponent {
   static propTypes = {
     /** Boolean indicating whether the button should render as disabled */

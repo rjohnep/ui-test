@@ -1,5 +1,2 @@
-description or documentation about my component, supports markdown
-    
-~~~javascript
-<Button onClick={clicked()}>😀 😎 👍 💯</Button>
-~~~
+# Button
+The core component is Button, the component can be transformed to link by `href` 

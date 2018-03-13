@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-import CoreButton from 'core/Button';
+import CoreButton from 'core/Button/StyledButton';
 
-const StyledSecondary = styled(CoreButton)`
-  color: blue;
-`;
+// const StyledSecondary = styled(CoreButton)`
+//   color: blue;
+// `;
 
-export default StyledSecondary;
+export default CoreButton;

@@ -1,10 +1,18 @@
-import buttonConfigBase from 'core/Button/config';
+import deepMerge from 'deepmerge';
+import theme from 'styled-theming';
 
-const buttonConfigTheme = {};
+import buttonConfigBase from 'core/Button/model';
 
-export default {
+const baseTheme = {
+  ...buttonConfigBase,
+};
+
+const defaultTheme = {
   button: {
-    ...buttonConfigBase,
-    ...buttonConfigTheme,
+    colors: {
+      main: 'orange',
+    },
   },
 };
+
+export default deepMerge(baseTheme, defaultTheme);

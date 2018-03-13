@@ -9,6 +9,7 @@ function loadStories() {
 
 // addon-info
 setDefaults({
+  header: false,
   inline: true,
 });
 
