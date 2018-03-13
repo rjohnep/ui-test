@@ -1,7 +1,10 @@
-import Button from 'components/Button/Button';
+import { withTheme } from 'styled-components';
+
+import BaseButton from '../Base';
 import StyledSecondary from './StyledSecondary';
 
-class SecondaryButton extends Button {
+@withTheme
+class SecondaryButton extends BaseButton {
   static displayName = 'SecondaryButton';
   styledTag = StyledSecondary;
 }

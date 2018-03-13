@@ -1,12 +1,8 @@
-import StyledButton from 'core/Button/StyledButton';
-import buttonConfigBase from 'core/Button/model';
+import StyledBase from '../Base/StyledBase';
 
-const StyledPrimary = StyledButton.extend`
-  width: 200px;
+const StyledPrimary = StyledBase.extend`
+  color: ${(props) => props.theme.colors.white};
+  background: ${(props) => props.theme.colors.brand};
 `;
-
-StyledPrimary.defaultProps = {
-  theme: buttonConfigBase,
-};
 
 export default StyledPrimary;

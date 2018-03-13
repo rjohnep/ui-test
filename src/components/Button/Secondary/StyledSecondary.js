@@ -1,8 +1,8 @@
-import styled from 'styled-components';
-import CoreButton from 'core/Button/StyledButton';
+import StyledBase from '../Base/StyledBase';
 
-// const StyledSecondary = styled(CoreButton)`
-//   color: blue;
-// `;
+const StyledSecondary = StyledBase.extend`
+  color: ${(props) => props.theme.colors.dimmed};
+  background: ${(props) => props.theme.colors.white};
+`;
 
-export default CoreButton;
+export default StyledSecondary;

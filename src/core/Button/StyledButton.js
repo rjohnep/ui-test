@@ -1,23 +1,18 @@
 import styled from 'styled-components';
-import theme from 'styled-theming';
-import buttonConfigBase from './model';
-
-theme('button', {
-  text: {
-    fontSize: '18px',
-  },
-  colors: {
-    main: 'green',
-  },
-});
 
 const StyledButton = styled.button`
-  font-size: ${(props) => props.theme.button.text.fontSize};
-  color: ${(props) => props.theme.button.colors.main};
-`;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 
-StyledButton.defaultProps = {
-  theme: buttonConfigBase,
-};
+  margin: 0;
+  padding: 0;
+
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: 0;
+`;
 
 export default StyledButton;

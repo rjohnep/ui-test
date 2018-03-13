@@ -38,7 +38,7 @@ export default class Button extends PureComponent {
       ...props
     } = this.props;
 
-    const disabledProp = disabled || !href && !onClick;
+    const disabledProp = disabled || !href && !onClick && type === 'button';
 
     return {
       ...props,
@@ -54,7 +54,7 @@ export default class Button extends PureComponent {
     const tagProps = this.componentProps;
 
     return (
-        <Tag {...tagProps}>{this.props.children}</Tag>
+      <Tag {...tagProps}>{this.props.children}</Tag>
     );
   }
 }

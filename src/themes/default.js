@@ -1,17 +1,9 @@
 import deepMerge from 'deepmerge';
-import theme from 'styled-theming';
-
-import buttonConfigBase from 'core/Button/model';
-
-const baseTheme = {
-  ...buttonConfigBase,
-};
+import baseTheme from './base';
 
 const defaultTheme = {
-  button: {
-    colors: {
-      main: 'orange',
-    },
+  colors: {
+    black: '#1B1D24',
   },
 };
 

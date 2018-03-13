@@ -1,12 +1,9 @@
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
-// import withTheme from 'hocs/withTheme';
-import { withTheme } from 'styled-components';
 
-import CoreButton from 'core/Button';
+import StyledBase from './StyledBase';
 
-@withTheme
-class Button extends PureComponent {
+class BaseButton extends PureComponent {
   static propTypes = {
     /** Boolean indicating whether the button should render as disabled */
     label: PropTypes.string,
@@ -25,7 +22,6 @@ class Button extends PureComponent {
 
   static defaultProps = {
     label: '',
-    /** Add an Icon by name. */
     icon: '',
     href: '',
     type: 'button',
@@ -33,6 +29,7 @@ class Button extends PureComponent {
     onClick: false,
     theme: {},
   };
+
 
   get content() {
     const { icon, label } = this.props;
@@ -50,12 +47,13 @@ class Button extends PureComponent {
     return props;
   }
 
+  styledTag = StyledBase;
 
   render() {
-    const StyledTag = this.styledTag || CoreButton;
+    const StyledTag = this.styledTag;
 
     return <StyledTag {...this.componentProps}>{this.content}</StyledTag>;
   }
 }
 
-export default Button;
+export default BaseButton;
