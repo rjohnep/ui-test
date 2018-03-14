@@ -1,5 +1,5 @@
 import deepMerge from 'deepmerge';
-import baseTheme from './base';
+import baseTheme from '../Base';
 
 const defaultTheme = {
   colors: {

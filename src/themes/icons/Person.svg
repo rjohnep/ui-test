@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>Person</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1">
+        <g id="Person">
+            <path d="M12,6 C10.3431429,6 9,7.34314286 9,9 C9,10.6568571 10.3431429,12 12,12 C13.6568571,12 15,10.6568571 15,9 C15,7.34314286 13.6568571,6 12,6 Z M18,18 L18,16 C18,15.111 14.7692308,13 12,13 C9.23076923,13 6,15 6,16 L6,18 L18,18 L18,18 Z" id="Imported-Layers"></path>
+        </g>
+    </g>
+</svg>

@@ -13,6 +13,13 @@ module.exports = (baseConfig, env) => {
     use: ['raw-loader'],
   };
 
+  config.module.rules.unshift(
+    {
+      test: /\.svg$/,
+      loader: 'svg-sprite-loader',
+    }
+  );
+
   config.resolve.modules.push(path.resolve('./src'), 'node_modules');
 
   return config;
