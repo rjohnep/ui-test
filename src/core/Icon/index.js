@@ -7,8 +7,8 @@ const Icon = (props) => {
   const { glyph, ...rest } = props;
 
   return (
-    <StyledIcon {...rest} viewBox={glyph.viewBox}>
-      <use xlinkHref={glyph.id} />
+    <StyledIcon {...rest}>
+      <use xlinkHref={`#${glyph.id}`} />
     </StyledIcon>
   );
 };

@@ -6,7 +6,7 @@ import { action } from '@storybook/addon-actions';
 
 import { PrimaryButton, SecondaryButton, DefaultButton } from 'components/Button';
 import Icon from 'components/Icon';
-import PersonIcon from 'themes/icons/account.svg';
+import PersonIcon from 'themes/icons/Person.svg';
 import BaseButton from 'components/Button/Base';
 import readme from './readme.md';
 
