@@ -7,6 +7,7 @@ const getIconSize = ({ theme, size }) => css`
 
 const StyledIcon = styled.svg`
   display: inline-block;
+  fill: currentColor;
   ${getIconSize};
 `;
 

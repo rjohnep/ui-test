@@ -1,12 +1,10 @@
 import { withTheme } from 'styled-components';
 
 import Button from '../Base';
-import StyledDefault from './StyledDefault';
+import StyledDefaultButton from './StyledDefaultButton';
 
 @withTheme
-class DefaultButton extends Button {
+export default class DefaultButton extends Button {
   static displayName = 'DefaultButton';
-  styledTag = StyledDefault;
+  styledTag = StyledDefaultButton;
 }
-
-export default DefaultButton;

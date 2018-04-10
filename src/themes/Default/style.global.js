@@ -15,5 +15,8 @@ injectGlobal`
   body {
     font: 400 ${theme.font.size} /${theme.font.lineHeight} ${theme.font.family};
     color: ${theme.colors.text};
+    -webkit-touch-callout: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 `;

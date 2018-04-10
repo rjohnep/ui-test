@@ -38,7 +38,7 @@ export default class Button extends PureComponent {
       ...props
     } = this.props;
 
-    const disabledProp = disabled || !href && !onClick && type === 'button';
+    const disabledProp = disabled || (!href && !onClick && type === 'button');
 
     return {
       ...props,

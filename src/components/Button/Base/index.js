@@ -1,43 +1,65 @@
 import PropTypes from 'prop-types';
-import React, { PureComponent } from 'react';
+import React, { PureComponent, Fragment } from 'react';
 
-import StyledBase from './StyledBase';
+import StyledBaseButton from './StyledBaseButton';
+import StyledIcon from './StyledIcon';
 
-class BaseButton extends PureComponent {
+export default class BaseButton extends PureComponent {
   static propTypes = {
-    /** Boolean indicating whether the button should render as disabled */
+    /** Label text to place in the button. */
     label: PropTypes.string,
-    /** Add an Icon by name. */
+    /** Icon element to place in the button. */
     icon: PropTypes.string,
-    /** component styles */
+    /** Whether an icon and label should be reversed so that the icon is at the end of the anchor. */
+    reverse: PropTypes.bool,
+    /** The type of button. Set the type to submit for the default button on forms. */
     type: PropTypes.oneOf(['reset', 'submit', 'button']),
     /** The color of the component. It supports those theme colors that make sense for this component. */
-    color: PropTypes.oneOf(['default', 'danger', 'brand']),
-    href: PropTypes.string,
+    color: PropTypes.oneOf(['default', 'danger', 'primary']),
+    /** A button can reduce its padding to fit into tighter spaces. */
+    compact: PropTypes.bool,
+    /** If `true`, the button will be disabled. */
     disabled: PropTypes.bool,
+    /** If specified, the button will behave like an anchor tag. */
+    href: PropTypes.string,
+    /** Click handler. Not setting this property and not specifying a href causes the Button to be disabled. */
     onClick: PropTypes.oneOfType([
       PropTypes.func,
       PropTypes.oneOf([false]),
     ]),
-    theme: PropTypes.object,
   };
 
   static defaultProps = {
     label: '',
     icon: '',
+    reverse: false,
     href: '',
     type: 'button',
     color: 'default',
+    compact: false,
     disabled: false,
     onClick: false,
-    theme: {},
   };
 
+  get icon() {
+    const { icon, reverse } = this.props;
+
+    const iconProps = {
+      glyph: icon,
+      reverse,
+    };
+
+    return !!icon && <StyledIcon {...iconProps} />;
+  }
 
   get content() {
-    const { icon, label } = this.props;
+    const { label, reverse } = this.props;
 
-    return `${icon} ${label}`;
+    return (
+      <Fragment>
+        {!reverse && this.icon} {label} {reverse && this.icon}
+      </Fragment>
+    );
   }
 
   get componentProps() {
@@ -50,11 +72,9 @@ class BaseButton extends PureComponent {
     return props;
   }
 
-  styledTag = StyledBase;
+  styledTag = StyledBaseButton;
 
   render() {
     return <this.styledTag {...this.componentProps}>{this.content}</this.styledTag>;
   }
 }
-
-export default BaseButton;

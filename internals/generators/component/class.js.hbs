@@ -1,0 +1,22 @@
+import PropTypes from 'prop-types';
+import React, { {{type}} } from 'react';
+{{#if withTheme}}
+import { withTheme } from 'styled-components';
+{{/if}}
+
+{{#if withTheme}}
+@withTheme
+{{/if}}
+export default class {{ properCase name }} extends {{{ type }}} {
+  static propTypes = {
+
+  };
+
+  render() {
+    return (
+      <div>
+        Hola {{ properCase name }}
+      </div>
+    );
+  }
+}

@@ -8,13 +8,13 @@ const Icon = (props) => {
 
   return (
     <StyledIcon {...rest}>
-      <use xlinkHref={`#${glyph.id}`} />
+      <use xlinkHref={`#${glyph}`} />
     </StyledIcon>
   );
 };
 
 Icon.propTypes = {
-  glyph: PropTypes.object.isRequired,
+  glyph: PropTypes.string.isRequired,
   size: PropTypes.oneOf(['small', 'medium', 'large']),
 };
 

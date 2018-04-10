@@ -13,6 +13,12 @@ const StyledButton = styled.button`
   color: inherit;
   background: transparent;
   border: 0;
+
+  ${({ disabled }) => disabled && `
+    cursor: auto;
+    opacity: .5;
+  `}
+
 `;
 
 export default StyledButton;
